@@ -14,7 +14,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://app.marianovqz.com/")
+@CrossOrigin(origins = "https://app.marianovqz.com")
 //@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/promocion")
 public class VotanteController {
