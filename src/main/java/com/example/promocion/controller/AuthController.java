@@ -31,7 +31,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @RestController
-@CrossOrigin(origins = "https://app.marianovqz.com")
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/auth")
 public class AuthController {
 

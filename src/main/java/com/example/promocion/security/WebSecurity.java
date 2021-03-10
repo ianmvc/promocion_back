@@ -22,6 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @Configuration
 @EnableWebSecurity
@@ -72,6 +73,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+    }
+    
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**");
     }
 
 }
