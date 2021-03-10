@@ -27,6 +27,13 @@ public class votante {
 	@NotNull
 	private String seccion;
 
+	@NotNull
+	private String fecha_agregado;
+	
+	private boolean validado;
+	
+	private String fecha_validado;
+
 	public Long getId() {
 		return id;
 	}
@@ -73,5 +80,29 @@ public class votante {
 
 	public void setSeccion(String seccion) {
 		this.seccion = seccion;
+	}
+	
+	public boolean getValidado() {
+		return validado;
+	}
+
+	public void setValidado(boolean validado) {
+		this.validado = validado;
+	}
+	
+	public String getFecha_agregado() {
+		return fecha_agregado;
+	}
+
+	public void setFecha_agregado(String fecha_agregado) {
+		this.fecha_agregado = fecha_agregado;
+	}
+	
+	public String getFecha_validado() {
+		return fecha_validado;
+	}
+
+	public void setFecha_validado(String fecha_validado) {
+		this.fecha_validado = fecha_validado;
 	}
 }

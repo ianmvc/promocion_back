@@ -48,6 +48,7 @@ public class VotanteController {
             return new ResponseEntity(new Mensaje("La sección es obligatoria"), HttpStatus.BAD_REQUEST);
         if(votanteService.existePorNombre(votante.getNombreVotante()))
             return new ResponseEntity(new Mensaje("Ese votante ya existe"), HttpStatus.BAD_REQUEST);
+
         votanteService.guardar(votante);
         return new ResponseEntity(new Mensaje("Votante registrado"), HttpStatus.CREATED);
     }
@@ -76,6 +77,9 @@ public class VotanteController {
         prodUpdate.setTelcel(votante.getTelcel());
         prodUpdate.setTelcasa(votante.getTelcasa());
         prodUpdate.setSeccion(votante.getSeccion());
+        prodUpdate.setValidado(votante.getValidado());
+        prodUpdate.setFecha_agregado(votante.getFecha_agregado());
+        prodUpdate.setFecha_validado(votante.getFecha_validado());
         votanteService.guardar(prodUpdate);
         return new ResponseEntity(new Mensaje("Información de votante actualizada"), HttpStatus.CREATED);
     }
