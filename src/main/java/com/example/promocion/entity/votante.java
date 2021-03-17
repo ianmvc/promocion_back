@@ -1,5 +1,8 @@
 package com.example.promocion.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -105,4 +108,5 @@ public class votante {
 	public void setFecha_validado(String fecha_validado) {
 		this.fecha_validado = fecha_validado;
 	}
+	
 }

@@ -1,6 +1,7 @@
 package com.example.promocion.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +16,7 @@ import java.util.Optional;
 public class VotanteService {
 	  @Autowired
 	  VotanteRepository votanteRepository;
-
+	  
 	    public List<votante> obtenerTodos(){
 	        List<votante> lista = votanteRepository.findAll();
 	        return lista;

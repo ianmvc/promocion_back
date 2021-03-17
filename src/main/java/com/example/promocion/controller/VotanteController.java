@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.promocion.DTO.Mensaje;
+import com.example.promocion.entity.Usuario;
 import com.example.promocion.entity.votante;
 import com.example.promocion.service.VotanteService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -20,7 +21,7 @@ import java.util.List;
 public class VotanteController {
 	@Autowired
     VotanteService votanteService;
-
+	
     @GetMapping("lista")
     public ResponseEntity<List<votante>> getLista(){
         List<votante> lista = votanteService.obtenerTodos();
