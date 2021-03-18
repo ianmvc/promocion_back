@@ -17,6 +17,9 @@ public class NuevoUsuario {
 
     @NotBlank
     private String password;
+    
+    @NotBlank
+    private String seccion;
 
     private Set<String> roles;
 
@@ -58,5 +61,13 @@ public class NuevoUsuario {
 
     public void setRoles(Set<String> roles) {
         this.roles = roles;
+    }
+    
+    public String getSeccion() {
+        return password;
+    }
+
+    public void setSeccion(String seccion) {
+        this.seccion = seccion;
     }
 }

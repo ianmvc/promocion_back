@@ -24,6 +24,9 @@ public class Usuario {
 
     @NotNull
     private String password;
+    
+    @NotNull
+    private String seccion;
 
     @NotNull
     @ManyToMany
@@ -78,6 +81,14 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public String getSeccion() {
+        return seccion;
+    }
+
+    public void setSeccion(String seccion) {
+        this.seccion = seccion;
     }
 
     public Set<Rol> getRoles() {
