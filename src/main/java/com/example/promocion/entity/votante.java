@@ -36,6 +36,16 @@ public class votante {
 	private boolean validado;
 	
 	private String fecha_validado;
+	
+	private String colonia;
+	
+	private String comentarios;
+	
+	private String instragram;
+	
+	private String facebook;
+	
+	private String red_social;
 
 	public Long getId() {
 		return id;
@@ -107,6 +117,46 @@ public class votante {
 
 	public void setFecha_validado(String fecha_validado) {
 		this.fecha_validado = fecha_validado;
+	}
+
+	public String getColonia() {
+		return colonia;
+	}
+
+	public void setColonia(String colonia) {
+		this.colonia = colonia;
+	}
+
+	public String getComentarios() {
+		return comentarios;
+	}
+
+	public void setComentarios(String comentarios) {
+		this.comentarios = comentarios;
+	}
+
+	public String getInstragram() {
+		return instragram;
+	}
+
+	public void setInstragram(String instragram) {
+		this.instragram = instragram;
+	}
+
+	public String getFacebook() {
+		return facebook;
+	}
+
+	public void setFacebook(String facebook) {
+		this.facebook = facebook;
+	}
+
+	public String getRed_social() {
+		return red_social;
+	}
+
+	public void setRed_social(String red_social) {
+		this.red_social = red_social;
 	}
 	
 }
