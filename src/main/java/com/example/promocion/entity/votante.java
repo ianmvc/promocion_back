@@ -46,6 +46,8 @@ public class votante {
 	private String facebook;
 	
 	private String red_social;
+	
+	private String usuario;
 
 	public Long getId() {
 		return id;
@@ -157,6 +159,14 @@ public class votante {
 
 	public void setRed_social(String red_social) {
 		this.red_social = red_social;
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 	
 }
