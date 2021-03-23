@@ -61,8 +61,8 @@ public class AuthController {
                 new Usuario(nuevoUsuario.getNombre(), 
                 		nuevoUsuario.getNombreUsuario(), 
                 		nuevoUsuario.getEmail(),
-                		nuevoUsuario.getSeccion(),
-                		passwordEncoder.encode(nuevoUsuario.getPassword()));
+                		passwordEncoder.encode(nuevoUsuario.getPassword()),
+                		nuevoUsuario.getSeccion());
         Set<String> rolesStr = nuevoUsuario.getRoles();
         Set<Rol> roles = new HashSet<>();
         for (String rol : rolesStr) {

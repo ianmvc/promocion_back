@@ -64,7 +64,7 @@ public class NuevoUsuario {
     }
     
     public String getSeccion() {
-        return password;
+        return seccion;
     }
 
     public void setSeccion(String seccion) {
