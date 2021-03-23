@@ -40,8 +40,8 @@ public class Usuario {
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
         this.email = email;
-        this.password = password;
         this.seccion = seccion;
+        this.password = password;
     }
 
     public Long getId() {
