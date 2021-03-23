@@ -22,7 +22,7 @@ public class UsuarioService {
     public boolean existePorNombre(String nu){
         return usuarioRepository.existsByNombreUsuario(nu);
     }
-
+    
     public  boolean existePorEmail(String email){
         return usuarioRepository.existsByEmail(email);
     }
