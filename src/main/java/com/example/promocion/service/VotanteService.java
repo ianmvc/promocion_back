@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.promocion.entity.votante;
+import com.example.promocion.repository.PromotorRepository;
 import com.example.promocion.repository.VotanteRepository;
 
 import java.util.List;
@@ -17,9 +18,17 @@ public class VotanteService {
 	  @Autowired
 	  VotanteRepository votanteRepository;
 	  
+	  @Autowired
+	  PromotorRepository promotorRepository;
+	  
 	    public List<votante> obtenerTodos(){
 	        List<votante> lista = votanteRepository.findAll();
 	        return lista;
+	    }
+	    
+	    public List<votante> obtenerUsuario(String promotor){
+	        List<votante> lista_xuser = promotorRepository.findByPromotor(promotor);
+	        return lista_xuser;
 	    }
 
 	    public Optional<votante> obtenerPorId(Long id){

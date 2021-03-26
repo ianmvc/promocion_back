@@ -21,10 +21,16 @@ import java.util.List;
 public class VotanteController {
 	@Autowired
     VotanteService votanteService;
-	
+		
     @GetMapping("lista")
     public ResponseEntity<List<votante>> getLista(){
         List<votante> lista = votanteService.obtenerTodos();
+        return new ResponseEntity<List<votante>>(lista, HttpStatus.OK);
+    }
+    
+    @GetMapping("lista/{promotor}")
+    public ResponseEntity<List<votante>> getListaPromotor(@PathVariable String promotor){
+        List<votante> lista = votanteService.obtenerUsuario(promotor);
         return new ResponseEntity<List<votante>>(lista, HttpStatus.OK);
     }
 
