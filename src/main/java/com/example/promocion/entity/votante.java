@@ -48,6 +48,8 @@ public class votante {
 	private String red_social;
 	
 	private String usuario;
+	
+	private boolean voto;
 
 	public Long getId() {
 		return id;
@@ -167,6 +169,14 @@ public class votante {
 
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
+	}
+
+	public boolean isVoto() {
+		return voto;
+	}
+
+	public void setVoto(boolean voto) {
+		this.voto = voto;
 	}
 	
 }
