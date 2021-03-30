@@ -88,6 +88,10 @@ public class VotanteController {
         prodUpdate.setValidado(votante.getValidado());
         prodUpdate.setFecha_agregado(votante.getFecha_agregado());
         prodUpdate.setFecha_validado(votante.getFecha_validado());
+        prodUpdate.setFacebook(votante.getFacebook());
+        prodUpdate.setRed_social(votante.getRed_social());
+        prodUpdate.setInstragram(votante.getInstragram());
+        prodUpdate.setComentarios(votante.getComentarios());
         votanteService.guardar(prodUpdate);
         return new ResponseEntity(new Mensaje("Información de votante actualizada"), HttpStatus.CREATED);
     }
