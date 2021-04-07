@@ -76,9 +76,9 @@ public class VotanteController {
             return new ResponseEntity(new Mensaje("El telefono es obligatorio"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(votante.getSeccion() ))
             return new ResponseEntity(new Mensaje("La sección es obligatoria"), HttpStatus.BAD_REQUEST);
-        if(votanteService.existePorNombre(votante.getNombreVotante()) &&
+        if(!votanteService.existePorNombre(votante.getNombreVotante()) && 
         		votanteService.obtenerPorNombre(votante.getNombreVotante()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Ese votante ya existe" + id), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Ese votante no existe"), HttpStatus.BAD_REQUEST);
         votante prodUpdate = votanteService.obtenerPorId(id).get();
         prodUpdate.setNombreVotante(votante.getNombreVotante());
         prodUpdate.setDomicilio(votante.getDomicilio());
