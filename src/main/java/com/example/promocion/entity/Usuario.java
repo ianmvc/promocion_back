@@ -27,6 +27,9 @@ public class Usuario {
     
     @NotNull
     private String seccion;
+    
+    @NotNull
+    private String casilla;
 
     @NotNull
     @ManyToMany
@@ -90,6 +93,14 @@ public class Usuario {
 
     public void setSeccion(String seccion) {
         this.seccion = seccion;
+    }
+    
+    public String getCasilla() {
+        return casilla;
+    }
+
+    public void setCasilla(String casilla) {
+        this.casilla = casilla;
     }
 
     public Set<Rol> getRoles() {
