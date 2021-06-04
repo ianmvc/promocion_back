@@ -20,6 +20,9 @@ public class NuevoUsuario {
     
     @NotBlank
     private String seccion;
+    
+    @NotBlank
+    private String casilla;
 
     private Set<String> roles;
 
@@ -69,5 +72,13 @@ public class NuevoUsuario {
 
     public void setSeccion(String seccion) {
         this.seccion = seccion;
+    }
+    
+    public String getCasilla() {
+        return casilla;
+    }
+
+    public void setCasilla(String casilla) {
+        this.casilla = casilla;
     }
 }

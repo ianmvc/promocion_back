@@ -62,7 +62,7 @@ public class AuthController {
                 		nuevoUsuario.getNombreUsuario(), 
                 		nuevoUsuario.getEmail(),
                 		passwordEncoder.encode(nuevoUsuario.getPassword()),
-                		nuevoUsuario.getSeccion());
+                		nuevoUsuario.getSeccion(), nuevoUsuario.getCasilla());
         Set<String> rolesStr = nuevoUsuario.getRoles();
         Set<Rol> roles = new HashSet<>();
         for (String rol : rolesStr) {
@@ -70,6 +70,10 @@ public class AuthController {
                 case "admin":
                     Rol rolAdmin = rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get();
                     roles.add(rolAdmin);
+                    break;
+                case "rc":
+                    Rol rolRc = rolService.getByRolNombre(RolNombre.ROLE_CASILLA).get();
+                    roles.add(rolRc);
                     break;
                 default:
                     Rol rolUser = rolService.getByRolNombre(RolNombre.ROLE_USER).get();
