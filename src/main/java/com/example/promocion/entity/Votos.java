@@ -23,6 +23,12 @@ public class Votos {
 	@NotNull
 	private String seccion;
 	
+	@NotNull
+	private String casilla;
+	
+	@NotNull
+	private String hora;
+	
 	private boolean registrado;
 	
 	
@@ -48,5 +54,21 @@ public class Votos {
 
 	public void setVoto(boolean registrado) {
 		this.registrado = registrado;
+	}
+	
+	public String getCasilla() {
+		return casilla;
+	}
+
+	public void setCasilla(String casilla) {
+		this.casilla = casilla;
+	}
+	
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
 }
