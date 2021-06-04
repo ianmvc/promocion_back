@@ -39,12 +39,13 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(@NotNull String nombre, @NotNull String nombreUsuario, @NotNull String email, @NotNull String password, @NotNull String seccion) {
+    public Usuario(@NotNull String nombre, @NotNull String nombreUsuario, @NotNull String email, @NotNull String password, @NotNull String seccion, @NotNull String casilla) {
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
         this.email = email;
         this.password = password;
         this.seccion = seccion;
+        this.casilla = casilla;
     }
 
     public Long getId() {
