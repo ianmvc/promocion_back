@@ -46,6 +46,7 @@ public class Usuario {
         this.password = password;
         this.seccion = seccion;
         this.casilla = casilla;
+       
     }
 
     public Long getId() {
