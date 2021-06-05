@@ -10,5 +10,5 @@ import com.example.promocion.entity.votante;
 @Repository
 public interface VotanteRepository extends JpaRepository<votante, Long>{
 	Optional<votante> findByNombreVotante(String np);
-    boolean existsByNombreVotante(String np);
+    boolean existsByNombreVotante(String np); 
 }
