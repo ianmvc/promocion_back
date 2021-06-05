@@ -16,7 +16,6 @@ import com.example.promocion.service.VotoService;
 
 @RestController
 @CrossOrigin(origins = "https://app.marianovqz.com")
-//@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/votacion")
 public class VotoController {
 	@Autowired
