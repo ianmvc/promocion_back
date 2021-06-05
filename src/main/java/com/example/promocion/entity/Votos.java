@@ -40,6 +40,14 @@ public class Votos {
 		this.id = id;
 	}
 	
+	public String getNombreVotante() {
+		return nombreVotante;
+	}
+
+	public void setNombreVotante(String nombreVotante) {
+		this.nombreVotante = nombreVotante;
+	}
+	
 	public String getSeccion() {
 		return seccion;
 	}
