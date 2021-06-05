@@ -9,6 +9,6 @@ import com.example.promocion.entity.Votos;
 
 @Repository
 public interface VotoRepository extends JpaRepository<Votos, Long> {
-	Optional<Votos> findByNombreVoto(String np);
-    boolean existsByNombreVoto(String np);
+	Optional<Votos> findBynombreVotante(String np);
+    boolean existsBynombreVotante(String np);
 }

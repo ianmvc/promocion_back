@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.promocion.entity.Votos;
-import com.example.promocion.entity.votante;
 import com.example.promocion.repository.VotoRepository;
 
 @Service
